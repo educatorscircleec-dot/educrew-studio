@@ -67,7 +67,7 @@ def main():
     name = os.path.splitext(os.path.basename(a.episode))[0]
     root = os.path.dirname(os.path.abspath(__file__))
     work = a.work or os.path.join(root, "work", name)
-    out = a.output or os.path.join(root, "output", f"EduCrew_{name}.mp4")
+    out = a.output or os.path.join(root, "output", (name if name.startswith("EduCrew") else f"EduCrew_{name}") + ".mp4")
     os.makedirs(os.path.join(work, "_parts"), exist_ok=True)
     os.makedirs(os.path.dirname(out), exist_ok=True)
 
@@ -88,6 +88,7 @@ def main():
     # 2. audio: place every voice line and sound effect on the timeline
     print("Mixing audio...")
     inputs, chains = [], []
+    busy_until = 0.0  # spoken lines never overlap: a line waits for the previous one to finish
     for s, st in zip(ep["shots"], starts):
         n = f"shot{s['id']:02d}"
         fx = os.path.join(work, "sfx", n + ".wav")
@@ -103,11 +104,14 @@ def main():
                 print(f"  ! missing voice line: {v}")
                 continue
             vd = duration(v)
-            if line["at"] + vd > s["duration"] + 1.0:
-                print(f"  ! {n} line {k} runs {line['at'] + vd - s['duration']:.1f}s past the shot")
+            begin = max(st + line["at"], busy_until + 0.3)
+            busy_until = begin + vd
+            if busy_until > st + s["duration"] + 1.5:
+                print(f"  ! {n} line {k} runs {busy_until - st - s['duration']:.1f}s past its shot "
+                      f"(make the shot longer in the episode file)")
             inputs.append(v)
             i = len(inputs)
-            chains.append(f"[{i}:a]adelay={int((st + line['at']) * 1000)}:all=1[a{i}]")
+            chains.append(f"[{i}:a]adelay={int(begin * 1000)}:all=1[a{i}]")
     labels = "".join(f"[a{i}]" for i in range(1, len(inputs) + 1))
     graph = ";".join(chains)
     if inputs:
@@ -116,23 +120,37 @@ def main():
         graph = "anullsrc=r=48000:cl=stereo,"
     graph += f"apad,atrim=0:{total},aformat=sample_rates=48000:channel_layouts=stereo,loudnorm=I=-16:TP=-1.5[aout]"
 
-    # 3. logo, fixed lower-right, whole episode
+    if busy_until > total:
+        print(f"  ! speech runs {busy_until - total:.1f}s past the end of the video")
+
+    # 3. logo: fixed lower-right for the whole episode; optional large brand reveal at the end
     logo = os.path.join(root, ep.get("logo", ""))
+    reveal = ep.get("brand_reveal")
     vchain = "[0:v]fade=t=in:d=0.6,fade=t=out:st={:.2f}:d=0.8[base]".format(total - 0.8)
+    loop_inputs = set()
     if os.path.exists(logo):
         inputs.append(logo)
         li = len(inputs)
-        lw = int(ep["width"] * 0.14)
-        m = int(ep["width"] * 0.04)
-        vchain += (f";[{li}:v]scale={lw}:-1,format=rgba,colorchannelmixer=aa=0.9[logo];"
-                   f"[base][logo]overlay=W-w-{m}:H-h-{m}[vout]")
+        loop_inputs.add(li)
+        lw, m = int(ep["width"] * 0.14), int(ep["width"] * 0.04)
+        if reveal:
+            t0 = total - reveal.get("seconds", 5)
+            big = int(ep["width"] * reveal.get("width", 0.6))
+            vchain += (f";[{li}:v]split[l1][l2];[l1]scale={lw}:-1,format=rgba,colorchannelmixer=aa=0.9[logo];"
+                       f"[l2]scale={big}:-1,format=rgba,fade=t=in:st={t0}:d=1.2:alpha=1[biglogo];"
+                       f"[base]drawbox=x=0:y=0:w=iw:h=ih:color=black@0.35:t=fill:enable='gte(t,{t0})'[dim];"
+                       f"[dim][logo]overlay=W-w-{m}:H-h-{m}:enable='lt(t,{t0})'[v1];"
+                       f"[v1][biglogo]overlay=(W-w)/2:(H-h)/2:enable='gte(t,{t0})'[vout]")
+        else:
+            vchain += (f";[{li}:v]scale={lw}:-1,format=rgba,colorchannelmixer=aa=0.9[logo];"
+                       f"[base][logo]overlay=W-w-{m}:H-h-{m}[vout]")
     else:
         print(f"  ! logo not found at {logo}: exporting without it")
         vchain += ";[base]null[vout]"
 
     cmd = ["ffmpeg", "-y", "-i", video]
-    for p in inputs:
-        cmd += ["-i", p]
+    for i, p in enumerate(inputs, 1):
+        cmd += (["-loop", "1", "-framerate", str(ep["fps"])] if i in loop_inputs else []) + ["-i", p]
     cmd += ["-filter_complex", vchain + ";" + graph, "-map", "[vout]", "-map", "[aout]",
             "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-t", f"{total}", out]

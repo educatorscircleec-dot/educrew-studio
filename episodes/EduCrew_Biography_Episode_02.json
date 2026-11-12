@@ -1,0 +1,241 @@
+{
+ "width": 720,
+ "height": 1280,
+ "fps": 24,
+ "logo": "logo/educrew_logo.png",
+ "style": "high-quality 3D animated family feature film still, charming stylized 3D characters with soft simplified facial features, storybook atmosphere, richly detailed Indian environment, lush green trees, flowers, warm cinematic lighting, soft realistic shadows, depth of field, rich warm colours, smooth detailed textures, vertical cinematic composition",
+ "negative": "photorealistic, photograph, live action, real people, 2D, flat illustration, anime, sketch, cartoon drawing, plastic doll, cheap TV animation, low quality, blurry, text, letters, watermark, logo, subtitles, signature, deformed, distorted face, scary, creepy, extra limbs, extra fingers, duplicated person, bindi, tilak, sindoor, temple, idol, diya, rangoli, religious symbols, music instruments",
+ "characters": {
+  "GIRL6": "a 6-year-old Indian Muslim girl, small and slim build, warm medium-brown skin, thick black hair in two plaits tied with red ribbons, knee-length teal frock with tiny white flowers over white churidar leggings, mustard-yellow cardigan",
+  "GIRL11": "the same Indian Muslim girl now 11 years old, slim build, warm medium-brown skin, thick black hair in two long plaits with red ribbons, school uniform of white salwar kameez with a teal dupatta pinned across, navy school bag",
+  "WOMAN19": "a 19-year-old Indian Muslim young woman, 160 cm tall, slim build, warm medium-brown skin, thick black hair in a single side plait, modest teal cotton salwar kameez, mustard-yellow dupatta loosely covering her head, cloth shoulder bag",
+  "WOMAN22": "the same Indian Muslim young woman now 22, 160 cm tall, slim build, warm medium-brown skin, thick black hair in a single side plait, modest teal salwar kameez, mustard-yellow dupatta loosely covering her head",
+  "BRIDE": "the same Indian Muslim young woman as a bride, slim build, warm medium-brown skin, thick black hair, modest deep red and gold embroidered gharara with a heavy dupatta covering her head, gold bangles",
+  "WIFE": "the same Indian Muslim young woman, now married, about 25, slim build, warm medium-brown skin, thick black hair in a low bun, modest teal salwar kameez, mustard-yellow dupatta covering her head, gold bangles",
+  "MOTHER": "the same Indian Muslim woman now a young mother about 30, slim build, warm medium-brown skin, thick black hair in a low bun, modest teal salwar kameez, mustard-yellow dupatta covering her head",
+  "TEACHER": "the same Indian Muslim woman now about 32, slim build, warm medium-brown skin, thick black hair in a low bun, modest teal kurta with straight trousers, mustard-yellow dupatta draped over her head, steel-strap wristwatch, small black handbag",
+  "TRAINER": "the same Indian Muslim woman now about 37, slim build, warm medium-brown skin, thick black hair in a low bun, modest teal kurta, mustard-yellow dupatta over her head, round reading glasses, steel-strap wristwatch",
+  "DESIGNER": "the same Indian Muslim woman now about 39, slim build, warm medium-brown skin, thick black hair in a low bun, modest teal kurta with a navy long jacket, mustard-yellow dupatta over her head, round reading glasses, ID lanyard",
+  "FOUNDER": "the same Indian Muslim woman in her early 40s, confident graceful posture, slim build, warm medium-brown skin, thick black hair in a low bun, elegant teal kurta, navy long jacket, mustard-yellow dupatta over her head, round reading glasses",
+  "AMMI": "her mother, a kind Indian Muslim woman in her early 30s, medium build, modest rust-maroon salwar kameez, mustard dupatta covering her hair, green glass bangles",
+  "AMMI_OLDER": "her mother, now in her early 50s, medium build, grey streaks in her hair, modest rust-maroon salwar kameez, cream dupatta covering her hair, green glass bangles, reading glasses",
+  "ABBU": "her father, an Indian Muslim man in his mid-30s, medium-tall, short black hair, neatly trimmed short black beard, pale blue shirt and grey trousers, steel-strap wristwatch",
+  "DADI": "her grandmother, a small Indian Muslim woman about 65, silver hair, off-white salwar kameez, lavender dupatta covering her head, round spectacles",
+  "BHAI": "her older brother, a thin 10-year-old Indian boy with short black hair, white half-sleeve shirt, khaki shorts",
+  "GROOM": "her groom, a tall Indian Muslim man in his late 20s, short black hair, short beard, cream sherwani",
+  "IN_LAW": "her mother-in-law, a gentle Indian Muslim woman in her late 50s, modest lilac salwar kameez, white dupatta covering her head",
+  "DAUGHTER": "her daughter, a 6-year-old girl with curly black hair in a high ponytail with a yellow clip, pink frock",
+  "SON": "her son, a 4-year-old boy with short straight black hair, green t-shirt and blue shorts",
+  "DAUGHTER11": "her daughter now about 11, curly black hair in a high ponytail with a yellow clip, school uniform",
+  "SON9": "her son now about 9, short straight black hair, school uniform with a green school bag",
+  "FRIEND_SCHOOL": "her school friend, an 11-year-old girl with a short black bob, same school uniform",
+  "FRIEND_COLLEGE": "her college friend, a cheerful young woman of 19 with a short black bob, lavender salwar kameez",
+  "SCHOOL_TEACHER": "a kind schoolteacher in her 40s in a green cotton saree with spectacles",
+  "COLLEAGUE": "a fellow teacher, a friendly woman in her 40s in a mustard cotton saree",
+  "TEAM": "a friendly diverse team of Indian academic professionals, men and women in smart-casual clothes",
+  "HOME": "a charming two-storey traditional Indian home with cream walls, teal wooden shutters and arched windows glowing warm yellow, a small front garden with bougainvillea, roses and a large mango tree, a small duck pond beside a little stream",
+  "NEW_HOME": "a cosy modest apartment home with balconies full of potted plants, cream walls, wooden furniture"
+ },
+ "voices": {
+  "NARRATOR": "Mary speaks in a warm, natural, expressive and conversational tone at a moderate pace, like a woman telling her own life story. The recording is very clear and close-up, with no background noise.",
+  "WOMAN": "Mary speaks in a bright, natural and friendly conversational tone at a moderate pace. The recording is very clear, with no background noise.",
+  "WOMAN_SOFT": "Mary speaks very softly and slowly, almost a whisper, gentle and hopeful. Very clear recording.",
+  "GIRL": "A young girl speaks in a high-pitched, playful and cheerful voice at a quick pace. Very clear recording.",
+  "GIRL_HI": "Divya speaks like a little girl, in a high-pitched, playful voice at a quick pace. Very clear recording.",
+  "AMMI_HI": "Divya speaks softly and warmly, calling out affectionately at a relaxed pace. Very clear recording.",
+  "AMMI": "Swapna speaks in a warm, gentle, motherly tone at a slow pace. Very clear recording.",
+  "ABBU_HI": "Rohit speaks in a warm, calm and cheerful deep voice at a relaxed pace. Very clear recording.",
+  "TEACHER_SCHOOL": "Meera speaks in a clear, kind and slightly formal teacher's voice. Very clear recording.",
+  "FRIEND_CHILD": "A young girl speaks excitedly and quickly with a high-pitched voice. Very clear recording.",
+  "FRIEND_COLLEGE": "Sneha speaks in a friendly, upbeat and warm voice at a moderate pace. Very clear recording.",
+  "FAMILY_MEMBER": "Gauri speaks slowly in a gentle, caring, older woman's voice. Very clear recording.",
+  "DAUGHTER": "A little girl about six speaks sweetly in a high-pitched voice. Very clear recording.",
+  "SON": "A little boy about four speaks excitedly in a high-pitched voice. Very clear recording.",
+  "CHILDREN": "Two young children call out together, excited and happy, high-pitched. Very clear recording.",
+  "STUDENT": "A young boy about ten speaks politely and curiously. Very clear recording.",
+  "COLLEAGUE": "Nisha speaks in a warm, friendly voice at a moderate pace. Very clear recording.",
+  "PARTICIPANT": "Aakash speaks in a curious, polite voice, slightly distant as if on a video call.",
+  "PARTICIPANT2": "Priya speaks in a pleased, appreciative voice, slightly distant as if on a video call.",
+  "TEAM_MEMBER": "Kabir speaks in a confident, friendly professional voice. Very clear recording.",
+  "COLLEAGUE2": "Riya speaks in a crisp, cheerful professional voice. Very clear recording."
+ },
+ "refs": {
+  "GIRL6": "work/EduCrew_Characters/keyframes/shot01.png",
+  "GIRL11": "work/EduCrew_Characters/keyframes/shot02.png",
+  "WOMAN19": "work/EduCrew_Characters/keyframes/shot03.png",
+  "WOMAN22": "work/EduCrew_Characters/keyframes/shot04.png",
+  "BRIDE": "work/EduCrew_Characters/keyframes/shot05.png",
+  "WIFE": "work/EduCrew_Characters/keyframes/shot06.png",
+  "MOTHER": "work/EduCrew_Characters/keyframes/shot07.png",
+  "TEACHER": "work/EduCrew_Characters/keyframes/shot08.png",
+  "TRAINER": "work/EduCrew_Characters/keyframes/shot09.png",
+  "DESIGNER": "work/EduCrew_Characters/keyframes/shot10.png",
+  "FOUNDER": "work/EduCrew_Characters/keyframes/shot11.png",
+  "AMMI": "work/EduCrew_Characters/keyframes/shot12.png",
+  "AMMI_OLDER": "work/EduCrew_Characters/keyframes/shot13.png",
+  "ABBU": "work/EduCrew_Characters/keyframes/shot14.png",
+  "CHILDREN": "work/EduCrew_Characters/keyframes/shot15.png",
+  "HOME": "work/EduCrew_Characters/keyframes/shot16.png"
+ },
+ "title": "Not the Topper, but a Dreamer",
+ "episode": 2,
+ "shots": [
+  {
+   "image": "the same stack of schoolbooks in morning light, {GIRL11} picking them up, close view",
+   "motion": "morning light grows, she lifts the books",
+   "sfx": "morning birds, books being picked up, no music",
+   "lines": [
+    {
+     "speaker": "NARRATOR",
+     "text": "I was never the class topper.",
+     "at": 0.6
+    }
+   ],
+   "ref": "GIRL11",
+   "id": 1,
+   "duration": 4.9,
+   "continue_from": "work/EduCrew_Biography_Episode_01/keyframes/shot10.png",
+   "continue_strength": 0.65
+  },
+  {
+   "image": "{AMMI} braiding {GIRL11}'s hair with red ribbons in the courtyard of {HOME} before school, seen from behind",
+   "motion": "the mother ties the ribbon, the girl adjusts her school bag",
+   "sfx": "fabric rustle, birds, kitchen sounds, no music",
+   "lines": [
+    {
+     "speaker": "NARRATOR",
+     "text": "I was an ordinary student, learning at my own pace, completing homework and preparing for examinations.",
+     "at": 0.6
+    }
+   ],
+   "ref": "GIRL11",
+   "id": 2,
+   "duration": 8.8
+  },
+  {
+   "image": "{GIRL11} and {FRIEND_SCHOOL} walking to school along a tree-lined street with a cycle rickshaw, seen from behind",
+   "motion": "they walk swinging their bags, tracking shot",
+   "sfx": "footsteps, bicycle bell, birds, distant traffic, no music",
+   "lines": [
+    {
+     "speaker": "NARRATOR",
+     "text": "Sometimes I did well, and sometimes I struggled.",
+     "at": 0.6
+    }
+   ],
+   "ref": "GIRL11",
+   "id": 3,
+   "duration": 5.5
+  },
+  {
+   "image": "a 1990s Indian classroom with wooden desks, a blackboard and ceiling fans, {SCHOOL_TEACHER} at the front, {GIRL11} at her desk seen from behind",
+   "motion": "the teacher walks between desks",
+   "sfx": "classroom murmur, chalk on blackboard, no music",
+   "lines": [
+    {
+     "speaker": "TEACHER_SCHOOL",
+     "text": "Have you completed your homework?",
+     "at": 0.6
+    }
+   ],
+   "ref": "GIRL11",
+   "id": 4,
+   "duration": 4.9
+  },
+  {
+   "image": "{GIRL11} standing at her desk holding up her notebook, seen from the side",
+   "motion": "she shows the notebook politely",
+   "sfx": "pages rustling, quiet classroom, no music",
+   "lines": [
+    {
+     "speaker": "GIRL",
+     "text": "Yes, ma'am. I've tried all the questions.",
+     "at": 0.6
+    }
+   ],
+   "ref": "GIRL11",
+   "id": 5,
+   "duration": 5.1
+  },
+  {
+   "image": "{GIRL11} looking out of the classroom window at clouds and birds, daydreaming, side view",
+   "motion": "clouds drift, a bird lands on the window grill",
+   "sfx": "birds, distant classroom voices, no music",
+   "lines": [
+    {
+     "speaker": "NARRATOR",
+     "text": "But I always had an imagination of my own.",
+     "at": 0.6
+    }
+   ],
+   "ref": "GIRL11",
+   "id": 6,
+   "duration": 5.9
+  },
+  {
+   "image": "a school playground with a big neem tree, {FRIEND_SCHOOL} running ahead and waving back to {GIRL11}",
+   "motion": "the friend runs, the girl hurries after her",
+   "sfx": "school bell, children laughing, running footsteps, no music",
+   "lines": [
+    {
+     "speaker": "FRIEND_CHILD",
+     "text": "Come on! Let's go and play.",
+     "at": 0.6
+    },
+    {
+     "speaker": "GIRL",
+     "text": "Wait for me!",
+     "at": 0.6
+    }
+   ],
+   "ref": "GIRL11",
+   "id": 7,
+   "duration": 6.4
+  },
+  {
+   "image": "{GIRL11} doing homework at a small wooden desk at home in the evening under a table lamp, seen from behind",
+   "motion": "her pencil writes, she pauses and looks up thoughtfully",
+   "sfx": "pencil writing, pages turning, crickets, no music",
+   "lines": [
+    {
+     "speaker": "NARRATOR",
+     "text": "I used to wonder what I would become when I grew up.",
+     "at": 0.6
+    }
+   ],
+   "ref": "GIRL11",
+   "id": 8,
+   "duration": 7.1
+  },
+  {
+   "image": "{GIRL11} on the rooftop of {HOME} at sunset looking at the sky, kites far away, seen from behind",
+   "motion": "her plaits move in the breeze, slow push-in",
+   "sfx": "wind, distant birds, evening ambience, no music",
+   "lines": [
+    {
+     "speaker": "NARRATOR",
+     "text": "I didn't have all the answers, but I had dreams.",
+     "at": 0.6
+    }
+   ],
+   "ref": "GIRL11",
+   "id": 9,
+   "duration": 6.3
+  },
+  {
+   "image": "{GIRL11} placing her schoolbooks on a table next to a college admission booklet, looking at it curiously, close side view",
+   "motion": "she slides the booklet towards her, camera moves onto it",
+   "sfx": "books placed down, page turning, no music",
+   "lines": [
+    {
+     "speaker": "NARRATOR",
+     "text": "And those dreams quietly stayed with me.",
+     "at": 0.6
+    }
+   ],
+   "ref": "GIRL11",
+   "id": 10,
+   "duration": 5.1
+  }
+ ]
+}

@@ -1,0 +1,194 @@
+{
+ "width": 720,
+ "height": 1280,
+ "fps": 24,
+ "logo": "logo/educrew_logo.png",
+ "style": "high-quality 3D animated family feature film still, charming stylized 3D characters with soft simplified facial features, storybook atmosphere, richly detailed Indian environment, lush green trees, flowers, warm cinematic lighting, soft realistic shadows, depth of field, rich warm colours, smooth detailed textures, vertical cinematic composition",
+ "negative": "photorealistic, photograph, live action, real people, 2D, flat illustration, anime, sketch, cartoon drawing, plastic doll, cheap TV animation, low quality, blurry, text, letters, watermark, logo, subtitles, signature, deformed, distorted face, scary, creepy, extra limbs, extra fingers, duplicated person, bindi, tilak, sindoor, temple, idol, diya, rangoli, religious symbols, music instruments",
+ "characters": {
+  "GIRL6": "a 6-year-old Indian Muslim girl, small and slim build, warm medium-brown skin, thick black hair in two plaits tied with red ribbons, knee-length teal frock with tiny white flowers over white churidar leggings, mustard-yellow cardigan",
+  "GIRL11": "the same Indian Muslim girl now 11 years old, slim build, warm medium-brown skin, thick black hair in two long plaits with red ribbons, school uniform of white salwar kameez with a teal dupatta pinned across, navy school bag",
+  "WOMAN19": "a 19-year-old Indian Muslim young woman, 160 cm tall, slim build, warm medium-brown skin, thick black hair in a single side plait, modest teal cotton salwar kameez, mustard-yellow dupatta loosely covering her head, cloth shoulder bag",
+  "WOMAN22": "the same Indian Muslim young woman now 22, 160 cm tall, slim build, warm medium-brown skin, thick black hair in a single side plait, modest teal salwar kameez, mustard-yellow dupatta loosely covering her head",
+  "BRIDE": "the same Indian Muslim young woman as a bride, slim build, warm medium-brown skin, thick black hair, modest deep red and gold embroidered gharara with a heavy dupatta covering her head, gold bangles",
+  "WIFE": "the same Indian Muslim young woman, now married, about 25, slim build, warm medium-brown skin, thick black hair in a low bun, modest teal salwar kameez, mustard-yellow dupatta covering her head, gold bangles",
+  "MOTHER": "the same Indian Muslim woman now a young mother about 30, slim build, warm medium-brown skin, thick black hair in a low bun, modest teal salwar kameez, mustard-yellow dupatta covering her head",
+  "TEACHER": "the same Indian Muslim woman now about 32, slim build, warm medium-brown skin, thick black hair in a low bun, modest teal kurta with straight trousers, mustard-yellow dupatta draped over her head, steel-strap wristwatch, small black handbag",
+  "TRAINER": "the same Indian Muslim woman now about 37, slim build, warm medium-brown skin, thick black hair in a low bun, modest teal kurta, mustard-yellow dupatta over her head, round reading glasses, steel-strap wristwatch",
+  "DESIGNER": "the same Indian Muslim woman now about 39, slim build, warm medium-brown skin, thick black hair in a low bun, modest teal kurta with a navy long jacket, mustard-yellow dupatta over her head, round reading glasses, ID lanyard",
+  "FOUNDER": "the same Indian Muslim woman in her early 40s, confident graceful posture, slim build, warm medium-brown skin, thick black hair in a low bun, elegant teal kurta, navy long jacket, mustard-yellow dupatta over her head, round reading glasses",
+  "AMMI": "her mother, a kind Indian Muslim woman in her early 30s, medium build, modest rust-maroon salwar kameez, mustard dupatta covering her hair, green glass bangles",
+  "AMMI_OLDER": "her mother, now in her early 50s, medium build, grey streaks in her hair, modest rust-maroon salwar kameez, cream dupatta covering her hair, green glass bangles, reading glasses",
+  "ABBU": "her father, an Indian Muslim man in his mid-30s, medium-tall, short black hair, neatly trimmed short black beard, pale blue shirt and grey trousers, steel-strap wristwatch",
+  "DADI": "her grandmother, a small Indian Muslim woman about 65, silver hair, off-white salwar kameez, lavender dupatta covering her head, round spectacles",
+  "BHAI": "her older brother, a thin 10-year-old Indian boy with short black hair, white half-sleeve shirt, khaki shorts",
+  "GROOM": "her groom, a tall Indian Muslim man in his late 20s, short black hair, short beard, cream sherwani",
+  "IN_LAW": "her mother-in-law, a gentle Indian Muslim woman in her late 50s, modest lilac salwar kameez, white dupatta covering her head",
+  "DAUGHTER": "her daughter, a 6-year-old girl with curly black hair in a high ponytail with a yellow clip, pink frock",
+  "SON": "her son, a 4-year-old boy with short straight black hair, green t-shirt and blue shorts",
+  "DAUGHTER11": "her daughter now about 11, curly black hair in a high ponytail with a yellow clip, school uniform",
+  "SON9": "her son now about 9, short straight black hair, school uniform with a green school bag",
+  "FRIEND_SCHOOL": "her school friend, an 11-year-old girl with a short black bob, same school uniform",
+  "FRIEND_COLLEGE": "her college friend, a cheerful young woman of 19 with a short black bob, lavender salwar kameez",
+  "SCHOOL_TEACHER": "a kind schoolteacher in her 40s in a green cotton saree with spectacles",
+  "COLLEAGUE": "a fellow teacher, a friendly woman in her 40s in a mustard cotton saree",
+  "TEAM": "a friendly diverse team of Indian academic professionals, men and women in smart-casual clothes",
+  "HOME": "a charming two-storey traditional Indian home with cream walls, teal wooden shutters and arched windows glowing warm yellow, a small front garden with bougainvillea, roses and a large mango tree, a small duck pond beside a little stream",
+  "NEW_HOME": "a cosy modest apartment home with balconies full of potted plants, cream walls, wooden furniture"
+ },
+ "voices": {
+  "NARRATOR": "Mary speaks in a warm, natural, expressive and conversational tone at a moderate pace, like a woman telling her own life story. The recording is very clear and close-up, with no background noise.",
+  "WOMAN": "Mary speaks in a bright, natural and friendly conversational tone at a moderate pace. The recording is very clear, with no background noise.",
+  "WOMAN_SOFT": "Mary speaks very softly and slowly, almost a whisper, gentle and hopeful. Very clear recording.",
+  "GIRL": "A young girl speaks in a high-pitched, playful and cheerful voice at a quick pace. Very clear recording.",
+  "GIRL_HI": "Divya speaks like a little girl, in a high-pitched, playful voice at a quick pace. Very clear recording.",
+  "AMMI_HI": "Divya speaks softly and warmly, calling out affectionately at a relaxed pace. Very clear recording.",
+  "AMMI": "Swapna speaks in a warm, gentle, motherly tone at a slow pace. Very clear recording.",
+  "ABBU_HI": "Rohit speaks in a warm, calm and cheerful deep voice at a relaxed pace. Very clear recording.",
+  "TEACHER_SCHOOL": "Meera speaks in a clear, kind and slightly formal teacher's voice. Very clear recording.",
+  "FRIEND_CHILD": "A young girl speaks excitedly and quickly with a high-pitched voice. Very clear recording.",
+  "FRIEND_COLLEGE": "Sneha speaks in a friendly, upbeat and warm voice at a moderate pace. Very clear recording.",
+  "FAMILY_MEMBER": "Gauri speaks slowly in a gentle, caring, older woman's voice. Very clear recording.",
+  "DAUGHTER": "A little girl about six speaks sweetly in a high-pitched voice. Very clear recording.",
+  "SON": "A little boy about four speaks excitedly in a high-pitched voice. Very clear recording.",
+  "CHILDREN": "Two young children call out together, excited and happy, high-pitched. Very clear recording.",
+  "STUDENT": "A young boy about ten speaks politely and curiously. Very clear recording.",
+  "COLLEAGUE": "Nisha speaks in a warm, friendly voice at a moderate pace. Very clear recording.",
+  "PARTICIPANT": "Aakash speaks in a curious, polite voice, slightly distant as if on a video call.",
+  "PARTICIPANT2": "Priya speaks in a pleased, appreciative voice, slightly distant as if on a video call.",
+  "TEAM_MEMBER": "Kabir speaks in a confident, friendly professional voice. Very clear recording.",
+  "COLLEAGUE2": "Riya speaks in a crisp, cheerful professional voice. Very clear recording."
+ },
+ "title": "EduCrew Character Bible",
+ "episode": 0,
+ "shots": [
+  {
+   "id": 1,
+   "duration": 3,
+   "image": "{GIRL6}, full body, standing in a garden, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 2,
+   "duration": 3,
+   "image": "{GIRL11}, full body, standing on a school path, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 3,
+   "duration": 3,
+   "image": "{WOMAN19}, full body, standing in a college corridor, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 4,
+   "duration": 3,
+   "image": "{WOMAN22}, full body, standing in a sunlit room holding books, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 5,
+   "duration": 3,
+   "image": "{BRIDE}, full body, standing in a courtyard decorated with string lights, seen from the side",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 6,
+   "duration": 3,
+   "image": "{WIFE}, full body, standing in a kitchen doorway of {NEW_HOME}, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 7,
+   "duration": 3,
+   "image": "{MOTHER}, full body, standing in a cosy living room, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 8,
+   "duration": 3,
+   "image": "{TEACHER}, full body, standing in a bright classroom, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 9,
+   "duration": 3,
+   "image": "{TRAINER}, full body, standing at a home desk with a laptop, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 10,
+   "duration": 3,
+   "image": "{DESIGNER}, full body, standing in a modern office, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 11,
+   "duration": 3,
+   "image": "{FOUNDER}, full body, standing in a bright modern workspace, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 12,
+   "duration": 3,
+   "image": "{AMMI}, full body, standing in a warm kitchen, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 13,
+   "duration": 3,
+   "image": "{AMMI_OLDER}, full body, sitting on a sofa, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 14,
+   "duration": 3,
+   "image": "{ABBU}, full body, standing at a garden gate, three-quarter side view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 15,
+   "duration": 3,
+   "image": "{DAUGHTER} and {SON} standing together in a playroom, full body, three-quarter view",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  },
+  {
+   "id": 16,
+   "duration": 3,
+   "image": "wide establishing shot of {HOME} in the evening, birds in the sky",
+   "motion": "",
+   "sfx": "",
+   "lines": []
+  }
+ ]
+}

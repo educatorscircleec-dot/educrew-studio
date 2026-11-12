@@ -19,10 +19,11 @@ for s in shots:
         if skip(out, a.force):
             continue
         desc = ep["voices"][line["speaker"]]
+        spoken = line.get("tts_text", line["text"])  # tts_text = same words, spelt for pronunciation
         print(f"shot {s['id']} {line['speaker']}: {line['text']}")
         torch.manual_seed(a.seed)
         d = dtok(desc, return_tensors="pt").to(dev)
-        p = tok(line["text"], return_tensors="pt").to(dev)
+        p = tok(spoken, return_tensors="pt").to(dev)
         audio = model.generate(input_ids=d.input_ids, attention_mask=d.attention_mask,
                                prompt_input_ids=p.input_ids, prompt_attention_mask=p.attention_mask)
         sf.write(out, audio.cpu().numpy().squeeze(), model.config.sampling_rate)

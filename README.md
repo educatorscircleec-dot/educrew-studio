@@ -1,10 +1,12 @@
 # EduCrew Studio
 
+Includes the complete 10-episode series **EduCrew: From a Little Dream to a Bigger World** (`episodes/`, `series/`, `SERIES_BIBLE.md`).
+
 Your own AI video pipeline built entirely from free, open-source models. It has no subscription and no per-video charges.
 
 | Step | What it makes | Free model | Licence |
 |---|---|---|---|
-| 1 | Photoreal still for each shot | RealVisXL V5 (SDXL) | OpenRAIL++ |
+| 1 | Still image for each shot, matched to character reference images | SDXL + IP-Adapter | OpenRAIL++ / Apache 2.0 |
 | 2 | Moving video clip from each still | Wan 2.2 TI2V-5B | Apache 2.0 |
 | 3 | Narrator and dialogue voices (Indian English) | Indic Parler-TTS (AI4Bharat) | Apache 2.0 |
 | 4 | Realistic sound effects, no music | MMAudio | see its repo |
