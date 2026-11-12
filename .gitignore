@@ -1,0 +1,9 @@
+work/
+output/
+__pycache__/
+*.pyc
+*.mp4
+*.wav
+*.flac
+.ipynb_checkpoints/
+logo/*.png
