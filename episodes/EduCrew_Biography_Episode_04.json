@@ -3,7 +3,8 @@
  "height": 1280,
  "fps": 24,
  "logo": "logo/educrew_logo.png",
- "style": "high-quality 3D animated family feature film still, charming stylized 3D characters with soft simplified facial features, storybook atmosphere, richly detailed Indian environment, lush green trees, flowers, warm cinematic lighting, soft realistic shadows, depth of field, rich warm colours, smooth detailed textures, vertical cinematic composition",
+ "logo_width": 0.18,
+ "style": "high-quality painterly 3D animated storybook film still, cosy miniature-diorama feel, charming stylized 3D characters with soft simplified facial features, richly detailed Indian environment full of small life: birds, butterflies, ducks, hens, potted flowers, lush green trees, warm glowing windows, soft blue-hour or golden light, gentle realistic shadows, depth and atmosphere, rich warm colours, vertical cinematic composition",
  "negative": "photorealistic, photograph, live action, real people, 2D, flat illustration, anime, sketch, cartoon drawing, plastic doll, cheap TV animation, low quality, blurry, text, letters, watermark, logo, subtitles, signature, deformed, distorted face, scary, creepy, extra limbs, extra fingers, duplicated person, bindi, tilak, sindoor, temple, idol, diya, rangoli, religious symbols, music instruments",
  "characters": {
   "GIRL6": "a 6-year-old Indian Muslim girl, small and slim build, warm medium-brown skin, thick black hair in two plaits tied with red ribbons, knee-length teal frock with tiny white flowers over white churidar leggings, mustard-yellow cardigan",

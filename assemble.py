@@ -132,7 +132,7 @@ def main():
         inputs.append(logo)
         li = len(inputs)
         loop_inputs.add(li)
-        lw, m = int(ep["width"] * 0.14), int(ep["width"] * 0.04)
+        lw, m = int(ep["width"] * ep.get("logo_width", 0.18)), int(ep["width"] * 0.035)
         if reveal:
             t0 = total - reveal.get("seconds", 5)
             big = int(ep["width"] * reveal.get("width", 0.6))

@@ -6,4 +6,3 @@ __pycache__/
 *.wav
 *.flac
 .ipynb_checkpoints/
-logo/*.png

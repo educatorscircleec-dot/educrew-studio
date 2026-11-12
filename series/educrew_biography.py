@@ -16,10 +16,13 @@ import json, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EP_DIR = os.path.join(ROOT, "episodes")
 
-STYLE = ("high-quality 3D animated family feature film still, charming stylized 3D characters with soft simplified "
-         "facial features, storybook atmosphere, richly detailed Indian environment, lush green trees, flowers, "
-         "warm cinematic lighting, soft realistic shadows, depth of field, rich warm colours, smooth detailed textures, "
-         "vertical cinematic composition")
+# Visual language taken from the client's reference video (not its scenes, characters or watermark):
+# painterly 3D storybook diorama, cosy high wide views full of small life, blue-hour skies, glowing windows,
+# a big tree canopy framing the top, flowing water with ducks, flowers, hens, a cat, clotheslines; slow camera.
+STYLE = ("high-quality painterly 3D animated storybook film still, cosy miniature-diorama feel, charming stylized 3D "
+         "characters with soft simplified facial features, richly detailed Indian environment full of small life: "
+         "birds, butterflies, ducks, hens, potted flowers, lush green trees, warm glowing windows, soft blue-hour or "
+         "golden light, gentle realistic shadows, depth and atmosphere, rich warm colours, vertical cinematic composition")
 NEGATIVE = ("photorealistic, photograph, live action, real people, 2D, flat illustration, anime, sketch, cartoon drawing, "
             "plastic doll, cheap TV animation, low quality, blurry, text, letters, watermark, logo, subtitles, signature, "
             "deformed, distorted face, scary, creepy, extra limbs, extra fingers, duplicated person, bindi, tilak, "
@@ -146,9 +149,11 @@ def S(image, motion, sfx, lines=(), ref=None):
 EPISODES = [
     # ------------------------------------------------------------------ 1
     ("A Little World of Happiness", "GIRL6", [
-        S("wide cinematic establishing shot of {HOME} in the evening, warm lights glowing in the windows, "
-          "birds flying home across a golden sky, butterflies over the flowers", "slow drone-like push towards the house, "
-          "leaves swaying, ducks gliding on the pond", "soft evening birds, leaves rustling, gentle stream",
+        S("high-angle wide storybook view of {HOME} at blue-hour dusk, the large mango tree's leafy canopy framing the top, "
+          "warm lights glowing in every window, a little stream with ducks flowing through the foreground, hens in the yard, "
+          "a cat on the roof, washing on a clothesline, family members small in the scene, distant green fields and hills",
+          "almost still camera with a very slow push-in, water flowing, ducks gliding, leaves swaying, birds flying home",
+          "soft evening birds, leaves rustling, gentle flowing stream, ducks",
           [N("My story began in a simple, happy home.")], ref="HOME"),
         S("{GIRL6} chasing butterflies in the front garden of {HOME}, ducks by the pond, seen from behind",
           "the girl runs and twirls after a butterfly, tracking camera at child height", "children's laughter, birds, ducks quacking",
@@ -465,7 +470,7 @@ def finish(shots, total=60.0):
 
 def main():
     os.makedirs(EP_DIR, exist_ok=True)
-    common = {"width": 720, "height": 1280, "fps": 24, "logo": "logo/educrew_logo.png", "style": STYLE,
+    common = {"width": 720, "height": 1280, "fps": 24, "logo": "logo/educrew_logo.png", "logo_width": 0.18, "style": STYLE,
               "negative": NEGATIVE, "characters": CHARACTERS, "voices": VOICES, "refs": REFS}
     sheet = dict(common, title="EduCrew Character Bible", episode=0,
                  shots=[{"id": i, "duration": 3, "image": img, "motion": "", "sfx": "", "lines": []}
