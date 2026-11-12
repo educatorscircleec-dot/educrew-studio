@@ -24,7 +24,7 @@ STYLE = ("high-quality painterly 3D animated storybook film still, cosy miniatur
          "birds, butterflies, ducks, hens, potted flowers, lush green trees, warm glowing windows, soft blue-hour or "
          "golden light, gentle realistic shadows, depth and atmosphere, rich warm colours, vertical cinematic composition")
 NEGATIVE = ("photorealistic, photograph, live action, real people, 2D, flat illustration, anime, sketch, cartoon drawing, "
-            "plastic doll, cheap TV animation, low quality, blurry, text, letters, watermark, logo, subtitles, signature, "
+            "plastic doll, cheap TV animation, European house, Mediterranean villa, terracotta tiled roof, low quality, blurry, text, letters, watermark, logo, subtitles, signature, "
             "deformed, distorted face, scary, creepy, extra limbs, extra fingers, duplicated person, bindi, tilak, "
             "sindoor, temple, idol, diya, rangoli, religious symbols, music instruments")
 
@@ -33,8 +33,9 @@ NEGATIVE = ("photorealistic, photograph, live action, real people, 2D, flat illu
 # TEAL clothes with a MUSTARD-YELLOW dupatta/accent.
 HER = "slim build, warm medium-brown skin, thick black hair"
 CHARACTERS = {
-    "GIRL6": f"a 6-year-old Indian Muslim girl, small and {HER} in two plaits tied with red ribbons, "
-             "knee-length teal frock with tiny white flowers over white churidar leggings, mustard-yellow cardigan",
+    "GIRL6": "a 6-year-old Indian Muslim girl with two long black plaits tied with red ribbon bows, no hairband, "
+             f"small and {HER}, knee-length teal frock with tiny white flowers over white churidar leggings, "
+             "mustard-yellow cardigan",
     "GIRL11": f"the same Indian Muslim girl now 11 years old, {HER} in two long plaits with red ribbons, "
               "school uniform of white salwar kameez with a teal dupatta pinned across, navy school bag",
     "WOMAN19": f"a 19-year-old Indian Muslim young woman, 160 cm tall, {HER} in a single side plait, "
@@ -55,10 +56,11 @@ CHARACTERS = {
                 "long jacket, mustard-yellow dupatta over her head, round reading glasses, ID lanyard",
     "FOUNDER": f"the same Indian Muslim woman in her early 40s, confident graceful posture, {HER} in a low bun, "
                "elegant teal kurta, navy long jacket, mustard-yellow dupatta over her head, round reading glasses",
-    "AMMI": "her mother, a kind Indian Muslim woman in her early 30s, medium build, modest rust-maroon salwar kameez, "
-            "mustard dupatta covering her hair, green glass bangles",
-    "AMMI_OLDER": "her mother, now in her early 50s, medium build, grey streaks in her hair, modest rust-maroon "
-                  "salwar kameez, cream dupatta covering her hair, green glass bangles, reading glasses",
+    "AMMI": "the mother, a kind Indian Muslim woman in her early 30s, medium build, wearing a deep maroon red "
+            "salwar kameez (not teal, not green) with a cream dupatta covering her hair, green glass bangles",
+    "AMMI_OLDER": "the mother, now in her early 50s, medium build, grey streaks in her hair, wearing a deep maroon red "
+                  "salwar kameez (not teal, not green) with a cream dupatta covering her hair, green glass bangles, "
+                  "reading glasses",
     "ABBU": "her father, an Indian Muslim man in his mid-30s, medium-tall, short black hair, neatly trimmed short "
             "black beard, pale blue shirt and grey trousers, steel-strap wristwatch",
     "DADI": "her grandmother, a small Indian Muslim woman about 65, silver hair, off-white salwar kameez, "
@@ -67,18 +69,23 @@ CHARACTERS = {
     "GROOM": "her groom, a tall Indian Muslim man in his late 20s, short black hair, short beard, cream sherwani",
     "IN_LAW": "her mother-in-law, a gentle Indian Muslim woman in her late 50s, modest lilac salwar kameez, "
               "white dupatta covering her head",
-    "DAUGHTER": "her daughter, a 6-year-old girl with curly black hair in a high ponytail with a yellow clip, pink frock",
-    "SON": "her son, a 4-year-old boy with short straight black hair, green t-shirt and blue shorts",
-    "DAUGHTER11": "her daughter now about 11, curly black hair in a high ponytail with a yellow clip, school uniform",
-    "SON9": "her son now about 9, short straight black hair, school uniform with a green school bag",
+    "DAUGHTER": "a 6-year-old Indian girl with warm medium-brown skin and curly black hair in a high ponytail with "
+                "a yellow clip, pink frock with white leggings",
+    "SON": "a 4-year-old Indian boy with warm medium-brown skin and short straight black hair, green t-shirt and "
+           "blue shorts",
+    "DAUGHTER11": "an 11-year-old Indian girl with warm medium-brown skin and curly black hair in a high ponytail "
+                  "with a yellow clip, school uniform",
+    "SON9": "a 9-year-old Indian boy with warm medium-brown skin and short straight black hair, school uniform with "
+            "a green school bag",
     "FRIEND_SCHOOL": "her school friend, an 11-year-old girl with a short black bob, same school uniform",
     "FRIEND_COLLEGE": "her college friend, a cheerful young woman of 19 with a short black bob, lavender salwar kameez",
     "SCHOOL_TEACHER": "a kind schoolteacher in her 40s in a green cotton saree with spectacles",
     "COLLEAGUE": "a fellow teacher, a friendly woman in her 40s in a mustard cotton saree",
     "TEAM": "a friendly diverse team of Indian academic professionals, men and women in smart-casual clothes",
-    "HOME": "a charming two-storey traditional Indian home with cream walls, teal wooden shutters and arched windows "
-            "glowing warm yellow, a small front garden with bougainvillea, roses and a large mango tree, "
-            "a small duck pond beside a little stream",
+    "HOME": "a modest traditional North Indian family house in a small Indian town, flat roof terrace with a low "
+            "parapet wall, cream lime-washed walls, teal-painted wooden doors and window grills, a small verandah "
+            "with a charpai, potted plants and bougainvillea, a large mango tree, a small duck pond and "
+            "a little stream beside it, not European, not Mediterranean, no tiled roof",
     "NEW_HOME": "a cosy modest apartment home with balconies full of potted plants, cream walls, wooden furniture",
 }
 
@@ -97,9 +104,12 @@ SHEET = [
     ("FOUNDER", "{FOUNDER}, full body, standing in a bright modern workspace, three-quarter side view"),
     ("AMMI", "{AMMI}, full body, standing in a warm kitchen, three-quarter side view"),
     ("AMMI_OLDER", "{AMMI_OLDER}, full body, sitting on a sofa, three-quarter side view"),
-    ("ABBU", "{ABBU}, full body, standing at a garden gate, three-quarter side view"),
-    ("CHILDREN", "{DAUGHTER} and {SON} standing together in a playroom, full body, three-quarter view"),
-    ("HOME", "wide establishing shot of {HOME} in the evening, birds in the sky"),
+    ("ABBU", "{ABBU}, full body, standing at the small iron garden gate of {HOME} at blue-hour dusk, "
+             "three-quarter side view"),
+    ("CHILDREN", "two Indian siblings only, no adults: {DAUGHTER} and {SON} standing side by side holding hands "
+                 "in a cosy Indian home playroom with toys and a window, full body, three-quarter view"),
+    ("HOME", "high-angle wide storybook view of {HOME} at blue-hour dusk, warm yellow light glowing from every "
+             "window, deep blue evening sky, birds flying home"),
 ]
 REFS = {name: f"work/EduCrew_Characters/keyframes/shot{i:02d}.png" for i, (name, _) in enumerate(SHEET, 1)}
 
