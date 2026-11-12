@@ -22,6 +22,10 @@ a, ep, work, shots = args("Make keyframes", lambda ap: (
     ap.add_argument("--steps", type=int, default=32),
     ap.add_argument("--ref-strength", type=float, default=0.55, help="how strongly to copy the character reference")))
 
+if not a.force and all(os.path.exists(os.path.join(work, "keyframes", f"shot{s['id']:02d}.png")) for s in shots):
+    print("All keyframes already exist; nothing to make. (Use --shots N --force to redo one.)")
+    raise SystemExit(0)
+
 model = ep.get("image_model", "stabilityai/stable-diffusion-xl-base-1.0")
 W, H = ep.get("key_width", 768), ep.get("key_height", 1344)
 pipe = StableDiffusionXLPipeline.from_pretrained(model, torch_dtype=torch.float16, variant="fp16", use_safetensors=True)
