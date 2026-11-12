@@ -1,0 +1,50 @@
+{
+  "_help": "Copy this file, rename it (e.g. episode02.json or diwali-lesson.json), fill in the shots. Keys starting with _ are ignored.",
+  "title": "YOUR VIDEO TITLE",
+  "episode": 2,
+  "width": 720,
+  "height": 1280,
+  "fps": 24,
+  "logo": "logo/educrew_logo.png",
+  "_help_series": "For the EduCrew series keep style, negative, characters and voices EXACTLY as they are. For a different story, rewrite characters.",
+  "style": "photorealistic cinematic film still, 1990s India, 35mm film look, warm Kodak colour, natural sunlight, realistic skin and fabric texture, shallow depth of field, no faces visible",
+  "negative": "face, visible face, eyes, cartoon, illustration, anime, 3d render, cgi, text, watermark, logo, subtitles, deformed hands, extra fingers, blurry, modern objects, smartphone",
+  "characters": {
+    "GIRL": "a slim 6-year-old Indian girl about 115 cm tall, thick black hair in two shoulder-length plaits tied with red ribbons, knee-length yellow cotton frock with tiny white flowers and puffed sleeves, black plastic sandals",
+    "MOTHER": "an Indian woman in her early 30s, medium build, long black hair in a low bun, rust-maroon cotton salwar kameez with a mustard-yellow dupatta over one shoulder, green and gold glass bangles",
+    "FATHER": "an Indian man in his mid-30s, medium-tall, short neat black hair, pale blue half-sleeve cotton shirt tucked into grey trousers, steel-strap wristwatch on left wrist",
+    "BROTHER": "a thin 10-year-old Indian boy with short black hair, white cotton vest and khaki half-pants",
+    "GRANDMOTHER": "a small slightly stooped Indian woman about 65, silver-grey hair in a bun, off-white cotton salwar kameez with a pale lavender dupatta loosely over her head",
+    "HOME": "modest 1990s Indian home, whitewashed walls with pale green lower half, red oxide floor, wooden windows with green iron grills, ceiling fan, steel almirah"
+  },
+  "voices": {
+    "NARRATOR": "Mary speaks in a warm, gentle, reflective tone with a moderate pace and soft emotion. The recording is very clear and close-up, with no background noise.",
+    "MOTHER": "Swapna speaks softly and warmly, calling out in a relaxed, affectionate tone. The recording is very clear with no background noise.",
+    "CHILD": "A young girl speaks playfully and quickly with a high-pitched, cheerful voice. The recording is very clear with no background noise."
+  },
+  "_help_shots": "Each shot: duration in seconds (all shots together = video length). image = what we see, use {GIRL}, {MOTHER}, {HOME} etc. motion = what moves. sfx = background sounds. lines = words spoken: speaker NARRATOR/MOTHER/CHILD, at = seconds into the shot.",
+  "shots": [
+    {
+      "id": 1,
+      "duration": 6.0,
+      "image": "Seen from behind, {GIRL} ... in a {HOME}, morning sunlight",
+      "motion": "what moves in the shot, and how the camera moves",
+      "sfx": "background sounds for this shot, no music",
+      "lines": [
+        {
+          "speaker": "NARRATOR",
+          "at": 0.5,
+          "text": "Exact words the narrator says."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "duration": 6.0,
+      "image": "...",
+      "motion": "...",
+      "sfx": "...",
+      "lines": []
+    }
+  ]
+}

@@ -10,7 +10,8 @@ Expects (inside --work, default work/episodeNN):
 
 If a shot has no clip, its keyframe is used with a slow cinematic push-in instead.
 
-Usage:  python assemble.py episodes/episode01.json [--work DIR] [-o out.mp4]
+Usage:  python assemble.py episodes/<name>.json [--work DIR] [-o out.mp4]
+Output: output/EduCrew_<name>.mp4
 """
 import argparse, json, os, subprocess, sys
 
@@ -63,10 +64,10 @@ def main():
     a = ap.parse_args()
 
     ep = json.load(open(a.episode, encoding="utf-8"))
-    num = ep["episode"]
+    name = os.path.splitext(os.path.basename(a.episode))[0]
     root = os.path.dirname(os.path.abspath(__file__))
-    work = a.work or os.path.join(root, "work", f"episode{num:02d}")
-    out = a.output or os.path.join(root, "output", f"EduCrew_Ep{num:02d}.mp4")
+    work = a.work or os.path.join(root, "work", name)
+    out = a.output or os.path.join(root, "output", f"EduCrew_{name}.mp4")
     os.makedirs(os.path.join(work, "_parts"), exist_ok=True)
     os.makedirs(os.path.dirname(out), exist_ok=True)
 

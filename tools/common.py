@@ -14,7 +14,8 @@ def args(desc, extra=None):
         extra(ap)
     a = ap.parse_args()
     ep = json.load(open(a.episode, encoding="utf-8"))
-    work = a.work or os.path.join(ROOT, "work", f"episode{ep['episode']:02d}")
+    name = os.path.splitext(os.path.basename(a.episode))[0]
+    work = a.work or os.path.join(ROOT, "work", name)
     want = {int(x) for x in a.shots.split(",")} if a.shots else None
     shots = [s for s in ep["shots"] if want is None or s["id"] in want]
     return a, ep, work, shots

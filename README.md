@@ -16,7 +16,8 @@ Your own AI video pipeline built entirely from free, open-source models. It has 
   Then follow the steps at the top of the notebook.
 - **Your own PC:** needs an NVIDIA GPU with 12 GB or more. Install Python, ffmpeg and the packages from the notebook, then run the same `tools/*.py` commands.
 
-## Making a new episode
+## Making a new video
+See `NEW_VIDEO.md`. In short:
 1. Copy `episodes/episode01.json` to `episode02.json`.
 2. Change only the `shots`: the images, motion, sound effects and lines.
 3. **Never change** `characters`, `voices`, `style` or `logo`. That keeps the family, narrator and logo the same across all 10 episodes.
