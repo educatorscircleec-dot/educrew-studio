@@ -126,7 +126,7 @@ Make them **in order**. Each episode starts from the last picture of the episode
 | Problem | What to do |
 |---|---|
 | Red error text in a cell | Copy the **last 10–20 lines** and send them to Claude |
-| "CUDA out of memory" in Step 2 | Add `--width 480 --height 832` to the Step 2 command |
+| "CUDA out of memory" in Step 2 | Add `--offload sequential` to the Step 2 command (slower, uses less memory) |
 | "401" or "gated repo" error in Step 3 | Check A2 step 2 (Agree and access) and that the `HF_TOKEN` secret is ticked |
 | No GPU option | Phone verification isn't done (A1) |
 | A shot looks wrong | Redo it with `--shots N --force --seed <new number>` in that step |
