@@ -12,7 +12,7 @@ import os
 import torch
 from PIL import Image
 from diffusers import AutoPipelineForImage2Image, DPMSolverMultistepScheduler, StableDiffusionXLPipeline
-from compel import Compel, ReturnedEmbeddingsType
+from compel import CompelForSDXL
 from common import ROOT, args, fill, path, skip
 
 a, ep, work, shots = args("Make keyframes", lambda ap: (
@@ -38,20 +38,16 @@ pipe.to("cuda")  # SDXL fits on a 16 GB T4
 img2img = AutoPipelineForImage2Image.from_pipe(pipe)
 blank = Image.new("RGB", (224, 224), (128, 128, 128))
 # Compel lets prompts run past SDXL's 77-token limit, so character descriptions are never cut off
-compel = Compel(tokenizer=[pipe.tokenizer, pipe.tokenizer_2], text_encoder=[pipe.text_encoder, pipe.text_encoder_2],
-                returned_embeddings_type=ReturnedEmbeddingsType.PENULTIMATE_HIDDEN_STATES_NON_NORMALIZED,
-                requires_pooled=[False, True], truncate_long_prompts=False)
+compel = CompelForSDXL(pipe, device="cuda")
 
 for s in shots:
     out = path(work, "keyframes", f"shot{s['id']:02d}.png")
     if skip(out, a.force):
         continue
     prompt = fill(s["image"], ep) + ", " + ep["style"]
-    cond, pooled = compel(prompt)
-    ncond, npooled = compel(ep["negative"])
-    cond, ncond = compel.pad_conditioning_tensors_to_same_length([cond, ncond])
-    kw = dict(prompt_embeds=cond, pooled_prompt_embeds=pooled, negative_prompt_embeds=ncond,
-              negative_pooled_prompt_embeds=npooled, num_inference_steps=a.steps,
+    c = compel(prompt, negative_prompt=ep["negative"])
+    kw = dict(prompt_embeds=c.embeds, pooled_prompt_embeds=c.pooled_embeds, negative_prompt_embeds=c.negative_embeds,
+              negative_pooled_prompt_embeds=c.negative_pooled_embeds, num_inference_steps=a.steps,
               guidance_scale=6.0, generator=torch.Generator("cpu").manual_seed(a.seed + s["id"]))
 
     if use_refs:
