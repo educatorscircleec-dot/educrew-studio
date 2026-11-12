@@ -9,6 +9,8 @@ Consistency features:
 - Fixed seeds make results repeatable; redo a weak shot with --shots N --force --seed X.
 """
 import os
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")  # less memory fragmentation
+import os
 import torch
 from PIL import Image
 from diffusers import AutoPipelineForImage2Image, DPMSolverMultistepScheduler, StableDiffusionXLPipeline
@@ -39,7 +41,7 @@ if use_refs:
                          weight_name="ip-adapter-plus_sdxl_vit-h.safetensors",
                          image_encoder_folder="models/image_encoder")
 pipe.to("cuda")  # SDXL fits on a 16 GB T4
-pipe.enable_vae_tiling()  # decode the large 768x1344 image in tiles to save memory
+pipe.vae.enable_tiling()  # decode the large 768x1344 image in tiles to save memory
 img2img = AutoPipelineForImage2Image.from_pipe(pipe)
 blank = Image.new("RGB", (224, 224), (128, 128, 128))
 # Compel lets prompts run past SDXL's 77-token limit, so character descriptions are never cut off
@@ -79,4 +81,4 @@ for s in shots:
     img.save(out)
     del img, kw, c
     torch.cuda.empty_cache()
-print("Keyframes done. Look at them; redo any with: --shots N --force --seed <another number>")
+print("[version: low-memory] Keyframes done. Look at them; redo any with: --shots N --force --seed <another number>")

@@ -1,5 +1,7 @@
 """Step 2: animate each keyframe into a short video clip. Free model: Wan 2.2 TI2V-5B (Apache 2.0).
 Slow on free GPUs: run a few shots per session with --shots; finished clips are skipped."""
+import os
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")  # less memory fragmentation
 import torch
 from PIL import Image
 from diffusers import AutoencoderKLWan, WanImageToVideoPipeline
