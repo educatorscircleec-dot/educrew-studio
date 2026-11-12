@@ -7,6 +7,12 @@ from parler_tts import ParlerTTSForConditionalGeneration
 from common import args, path, skip
 
 a, ep, work, shots = args("Make voices", lambda ap: ap.add_argument("--seed", type=int, default=7))
+import os
+need = [s for s in shots for k, _ in enumerate(s.get("lines", []), 1)
+        if a.force or not os.path.exists(os.path.join(work, "voice", f"shot{s['id']:02d}_{k}.wav"))]
+if not need:
+    print("All voice lines already exist; nothing to make. (Use --shots N --force to redo one.)")
+    raise SystemExit(0)
 dev = "cuda" if torch.cuda.is_available() else "cpu"
 name = "ai4bharat/indic-parler-tts"
 model = ParlerTTSForConditionalGeneration.from_pretrained(name).to(dev)
@@ -27,4 +33,4 @@ for s in shots:
         audio = model.generate(input_ids=d.input_ids, attention_mask=d.attention_mask,
                                prompt_input_ids=p.input_ids, prompt_attention_mask=p.attention_mask)
         sf.write(out, audio.cpu().numpy().squeeze(), model.config.sampling_rate)
-print("Voices done. Listen to them; redo any with --shots N --force --seed <another number>")
+print("[version: voices-v2] Voices done. Listen to them; redo any with --shots N --force --seed <another number>")
