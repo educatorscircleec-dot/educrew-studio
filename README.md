@@ -11,7 +11,9 @@ Your own AI video pipeline built entirely from free, open-source models. It has 
 | 5 | Final edit: timing, audio mix, logo | `assemble.py` + ffmpeg | yours |
 
 ## Where to run it
-- **Free:** Kaggle notebook `EduCrew_Studio_Kaggle.ipynb` (about 30 free GPU hours a week). Open it and follow the steps at the top.
+- **Free:** on Kaggle (about 30 free GPU hours a week). Go to kaggle.com → **Create → New Notebook → File → Import Notebook**, choose the **GitHub** tab, and paste
+  `https://github.com/educatorscircleec-dot/educrew-studio/blob/main/EduCrew_Studio_Kaggle.ipynb`.
+  Then follow the steps at the top of the notebook.
 - **Your own PC:** needs an NVIDIA GPU with 12 GB or more. Install Python, ffmpeg and the packages from the notebook, then run the same `tools/*.py` commands.
 
 ## Making a new episode
