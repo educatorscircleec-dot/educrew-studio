@@ -47,14 +47,13 @@ These pictures keep the girl, her mother, father and children looking the same i
    ```
    EPISODE = "episodes/EduCrew_Characters.json"
    ```
-3. Run **only these three cells**, one at a time, with the ▶ button on the left of each cell:
-   - **Setup** (first code cell)
-   - **Login + install** (second code cell; it takes 3–5 minutes)
-   - **Step 1: keyframes**
+3. Run **only these two cells**, one at a time (click inside, then Shift + Enter):
+   - **Setup** (first code cell; the first time it installs everything, 3–5 minutes)
+   - **Step 1: pictures**
 4. The 16 character pictures appear under Step 1. Check them:
    - Same girl, getting older? Teal clothes and mustard dupatta?
    - Modest clothing, an Indian Muslim family, a nice 3D storybook look?
-5. **Don't like one?** Add a new cell and run, for example (picture 3, new attempt):
+5. **Don't like one?** Use the **Redo one thing** cell at the bottom, for example (picture 3, new attempt):
    ```
    !cd tools && python make_keyframes.py ../$EPISODE --shots 3 --force --seed 77
    ```
@@ -69,23 +68,23 @@ These pictures keep the girl, her mother, father and children looking the same i
    ```
    EPISODE = "episodes/EduCrew_Biography_Episode_01.json"
    ```
-2. Run **Setup**, **Login + install**, then the steps in order:
+2. Run **Setup**, then Steps 1 to 5 in order, one at a time:
 
 | Step | What you see | Time (rough) |
 |---|---|---|
 | Step 1: keyframes | 10 pictures of the episode's shots | 10–15 min |
-| Step 2: clips | Pictures become moving video | **Slow, about 15–30 min per shot** |
+| Step 2: clips | Pictures become moving video (both GPUs at once) | **Slowest, about 40–50 min for 10 shots** |
 | Step 3: voices | Narration and dialogue, playable in the notebook | 10 min |
 | Step 4: sound effects | Birds, water, footsteps and so on | 10–15 min |
 | Step 5: assemble | The finished 60-second Reel plays in the notebook | 2 min |
 
 These times are estimates; nobody has measured them yet.
 
-3. **Step 2 is done in batches.** The cell says `--shots 1,2,3`. Run it, then change it to `4,5,6`,
-   then `7,8,9`, then `10`. Finished shots are skipped automatically, so it's safe to re-run.
+3. **Step 2 makes all 10 clips in one go**, split across both GPUs. If the session stops, run it
+   again; finished clips are skipped.
 4. Listen to the voices under Step 3. If one sounds wrong, redo it, for example:
    ```
-   !cd tools && /tmp/tts/bin/python make_voices.py ../$EPISODE --shots 5 --force --seed 21
+   !cd tools && /kaggle/working/.tts_env/bin/python make_voices.py ../$EPISODE --shots 5 --force --seed 21
    ```
 5. You can run Step 5 at any time. Shots without a video clip yet are shown as their picture
    with a slow zoom, so you can preview the episode early.
