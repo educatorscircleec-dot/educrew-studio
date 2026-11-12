@@ -62,37 +62,23 @@ These pictures keep the girl, her mother, father and children looking the same i
 
 ---
 
-## Part C: make Episode 1
+## Part C: make an episode (3 cells)
 
-1. In the first code cell, set:
+1. **Setup:** set the episode and run the cell (Shift + Enter):
    ```
    EPISODE = "episodes/EduCrew_Biography_Episode_01.json"
    ```
-2. Run **Setup**, then Steps 1 to 5 in order, one at a time:
+   It always downloads the latest fixes, installs what's needed, and logs in. It ends with `Ready: …`.
+2. **Pictures** (about 10 min): run the cell, then **look at the 10 pictures**.
+   To remake a weak one, use the **Redo one shot** cell at the bottom (`--redo 3 --seed 7`).
+3. **Everything else** (about 1.5 hours): run the cell. It makes, in order:
+   clips (on both GPUs) → voices → sound effects → the final 60-second Reel, and shows it.
+   You can switch tabs while it runs; keep the Mac awake (`caffeinate -d` in Terminal).
 
-| Step | What you see | Time (rough) |
-|---|---|---|
-| Step 1: keyframes | 10 pictures of the episode's shots | 10–15 min |
-| Step 2: clips | Pictures become moving video (both GPUs at once) | **Slowest, about 40–50 min for 10 shots** |
-| Step 3: voices | Narration and dialogue, playable in the notebook | 10 min |
-| Step 4: sound effects | Birds, water, footsteps and so on | 10–15 min |
-| Step 5: assemble | The finished 60-second Reel plays in the notebook | 2 min |
+If it stops, it says which step failed. Send the red lines to Claude, then run the same cell again;
+finished parts are kept.
 
-These times are estimates; nobody has measured them yet.
-
-3. **Step 2 makes all 10 clips in one go**, split across both GPUs. If the session stops, run it
-   again; finished clips are skipped.
-4. Listen to the voices under Step 3. If one sounds wrong, redo it, for example:
-   ```
-   !cd tools && /kaggle/working/.tts_env/bin/python make_voices.py ../$EPISODE --shots 5 --force --seed 21
-   ```
-5. You can run Step 5 at any time. Shots without a video clip yet are shown as their picture
-   with a slow zoom, so you can preview the episode early.
-
-### Download the video
-Right-hand panel, **Output**, then `educrew-studio/output/EduCrew_Biography_Episode_01.mp4`, then **Download**.
-
----
+**Download the Reel:** right panel → **Output** → `educrew-studio/output/EduCrew_Biography_Episode_01.mp4` → ⋮ → **Download**.
 
 ## Part D: when a session ends (time limits)
 
@@ -111,11 +97,11 @@ Always click **Stop session** when you're done, to save your weekly GPU hours.
 
 Make them **in order**. Each episode starts from the last picture of the episode before it.
 
-1. Change only the number:
+1. In **Setup**, change only the number:
    ```
    EPISODE = "episodes/EduCrew_Biography_Episode_02.json"
    ```
-2. Repeat Part C.
+2. Run **Setup**, **Pictures** and **Everything else**, as in Part C.
 3. Download each finished video, named `EduCrew_Biography_Episode_02.mp4` and so on.
 
 ---
