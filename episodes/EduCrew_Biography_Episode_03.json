@@ -93,6 +93,7 @@
     }
    ],
    "ref": "WOMAN19",
+   "ref_strength": 0.5,
    "id": 1,
    "duration": 4.8,
    "continue_from": "work/EduCrew_Biography_Episode_02/keyframes/shot10.png",
@@ -110,6 +111,7 @@
     }
    ],
    "ref": "WOMAN19",
+   "ref_strength": 0.5,
    "id": 2,
    "duration": 5.8
   },
@@ -125,6 +127,7 @@
     }
    ],
    "ref": "WOMAN19",
+   "ref_strength": 0.5,
    "id": 3,
    "duration": 7.0
   },
@@ -140,6 +143,7 @@
     }
    ],
    "ref": "WOMAN19",
+   "ref_strength": 0.5,
    "id": 4,
    "duration": 4.8
   },
@@ -155,6 +159,7 @@
     }
    ],
    "ref": "WOMAN19",
+   "ref_strength": 0.5,
    "id": 5,
    "duration": 7.4
   },
@@ -170,6 +175,7 @@
     }
    ],
    "ref": "FRIEND_COLLEGE",
+   "ref_strength": 0.5,
    "id": 6,
    "duration": 4.9
   },
@@ -185,6 +191,7 @@
     }
    ],
    "ref": "WOMAN19",
+   "ref_strength": 0.5,
    "id": 7,
    "duration": 7.8
   },
@@ -200,6 +207,7 @@
     }
    ],
    "ref": "WOMAN19",
+   "ref_strength": 0.5,
    "id": 8,
    "duration": 4.8
   },
@@ -215,6 +223,7 @@
     }
    ],
    "ref": "WOMAN19",
+   "ref_strength": 0.5,
    "id": 9,
    "duration": 7.8
   },
@@ -230,6 +239,7 @@
     }
    ],
    "ref": "WOMAN19",
+   "ref_strength": 0.5,
    "id": 10,
    "duration": 4.9
   }

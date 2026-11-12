@@ -33,8 +33,13 @@ def ref_path(name):
 
 use_refs = any(s.get("ref") and ref_path(s["ref"]) and os.path.exists(ref_path(s["ref"])) for s in shots)
 if use_refs:
-    pipe.load_ip_adapter("h94/IP-Adapter", subfolder="sdxl_models", weight_name="ip-adapter_sdxl.bin")
+    # "plus" ViT-H adapter: better at keeping a character's look, and its image encoder is ~3x smaller
+    # than the default ViT-bigG one, so SDXL + adapter fit on a free 16 GB T4
+    pipe.load_ip_adapter("h94/IP-Adapter", subfolder="sdxl_models",
+                         weight_name="ip-adapter-plus_sdxl_vit-h.safetensors",
+                         image_encoder_folder="models/image_encoder")
 pipe.to("cuda")  # SDXL fits on a 16 GB T4
+pipe.enable_vae_tiling()  # decode the large 768x1344 image in tiles to save memory
 img2img = AutoPipelineForImage2Image.from_pipe(pipe)
 blank = Image.new("RGB", (224, 224), (128, 128, 128))
 # Compel lets prompts run past SDXL's 77-token limit, so character descriptions are never cut off
@@ -53,7 +58,7 @@ for s in shots:
     if use_refs:
         rp = ref_path(s.get("ref", ""))
         if rp and os.path.exists(rp):
-            pipe.set_ip_adapter_scale(a.ref_strength)
+            pipe.set_ip_adapter_scale(s.get("ref_strength", a.ref_strength))
             kw["ip_adapter_image"] = Image.open(rp).convert("RGB")
             print(f"  using character reference {s['ref']}")
         else:
@@ -72,4 +77,6 @@ for s in shots:
         print(f"shot {s['id']}: {s['image'][:80]}...")
         img = pipe(width=W, height=H, **kw).images[0]
     img.save(out)
+    del img, kw, c
+    torch.cuda.empty_cache()
 print("Keyframes done. Look at them; redo any with: --shots N --force --seed <another number>")

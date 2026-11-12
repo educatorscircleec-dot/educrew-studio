@@ -492,6 +492,8 @@ def main():
         assert len(shots) == 10, title
         for s in shots:
             s["ref"] = s["ref"] or main_ref
+            # a place reference should only guide the look, not copy the picture's framing
+            s["ref_strength"] = 0.3 if s["ref"] == "HOME" else 0.5
         finish(shots)
         if n > 1:  # pick up exactly where the previous episode ended
             shots[0]["continue_from"] = f"work/EduCrew_Biography_Episode_{n - 1:02d}/keyframes/shot10.png"

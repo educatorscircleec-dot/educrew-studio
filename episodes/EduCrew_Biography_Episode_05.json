@@ -93,6 +93,7 @@
     }
    ],
    "ref": "WIFE",
+   "ref_strength": 0.5,
    "id": 1,
    "duration": 7.9,
    "continue_from": "work/EduCrew_Biography_Episode_04/keyframes/shot10.png",
@@ -110,6 +111,7 @@
     }
    ],
    "ref": "BRIDE",
+   "ref_strength": 0.5,
    "id": 2,
    "duration": 4.8
   },
@@ -125,6 +127,7 @@
     }
    ],
    "ref": "WIFE",
+   "ref_strength": 0.5,
    "id": 3,
    "duration": 9.1
   },
@@ -140,6 +143,7 @@
     }
    ],
    "ref": "WIFE",
+   "ref_strength": 0.5,
    "id": 4,
    "duration": 4.8
   },
@@ -155,6 +159,7 @@
     }
    ],
    "ref": "WIFE",
+   "ref_strength": 0.5,
    "id": 5,
    "duration": 4.8
   },
@@ -170,6 +175,7 @@
     }
    ],
    "ref": "WIFE",
+   "ref_strength": 0.5,
    "id": 6,
    "duration": 5.3
   },
@@ -185,6 +191,7 @@
     }
    ],
    "ref": "WIFE",
+   "ref_strength": 0.5,
    "id": 7,
    "duration": 4.8
   },
@@ -200,6 +207,7 @@
     }
    ],
    "ref": "WIFE",
+   "ref_strength": 0.5,
    "id": 8,
    "duration": 4.9
   },
@@ -215,6 +223,7 @@
     }
    ],
    "ref": "WIFE",
+   "ref_strength": 0.5,
    "id": 9,
    "duration": 8.7
   },
@@ -224,6 +233,7 @@
    "sfx": "soft room tone, no music",
    "lines": [],
    "ref": "WIFE",
+   "ref_strength": 0.5,
    "id": 10,
    "duration": 4.9
   }
